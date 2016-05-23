@@ -1,0 +1,27 @@
+{
+  "name": "todotron",
+  "productName": "Todotron",
+  "version": "0.1.0",
+  "main": "./app/main.js",
+  "description": "Electron App",
+  "author": "Me <me@example.org>",
+  "scripts": {
+    "start": "electron ./app/main",
+    "debug": "electron --debug=5858 ./app/main",
+    "build-win": "electron-packager . todotron --platform=win32 --arch=x64 --icon=app/assets/resources/icon.ico --version-string.ProductName=Todotron --version-string.FileDescription=Todotron --version-string.OriginalFilename=todotron.exe --overwrite=true --version=0.37.2 --app-version=0.1.0 --out=dist --prune",
+    "build-osx": "electron-packager . todotron --platform=darwin --arch=x64 --overwrite=true --version=0.37.2 --icon=app/assets/resources/icon.icns --app-category-type=public.app-category.developer-tools --app-version=0.1.0 --out=dist --prune",
+    "build-linux": "electron-packager . todotron --platform=linux --arch=x64  --overwrite=true --version=0.37.2 --icon=app/assets/resources/icon.png --app-version=0.1.0 --out=dist --prune"
+  },
+  "dependencies": {
+    "bower": "*",
+    "lowdb": "*",
+    "node-uuid": "^1.4.7"
+  },
+  "devDependencies": {
+    "electron-packager": "^6.0.2",
+    "electron-prebuilt": "^0.37.5",
+    "electron-windows-installer": "^1.2.5",
+    "gulp": "^3.9.1",
+    "devtron": "*"
+  }
+}

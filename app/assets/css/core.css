@@ -1,0 +1,9 @@
+.navbar {
+    border-radius: 0;
+}
+.navbar-header {
+	float:none;
+}
+.external-link {
+	cursor: pointer;
+}

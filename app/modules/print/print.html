@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todotron | Print</title>
+        <link rel="stylesheet" href="../../assets/libs/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/core.css">
+
+        <script src="../../assets/libs/angular/angular.min.js"></script>
+        <script src="../../assets/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+        <script src="../main/mainController.js"></script>
+        <script src="../main/menuService.js"></script>
+        <script src="../core/databaseService.js"></script>
+        <script src="../core/notificationService.js"></script>
+        <script src="../task/taskController.js"></script>
+        <script src="../about/aboutController.js"></script>
+        <script src="printController.js"></script>
+
+        <script src="../app.routes.js"></script>
+        <script src="../app.js"></script>
+    </head>
+    <body ng-app="todotronApp" ng-controller="PrintController as printCtrl">
+       <div class="container">
+		    <table class="table">
+		       <thead>
+		        <tr>
+		          <th>Name</th>
+		          <th>Status</th>
+		          <th>Description</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr ng-repeat="task in list">
+		          <td>{{task.name}}</td>
+		          <td ng-if="task.done" class="taskItem">Done</td>
+		          <td ng-if="!task.done" class="taskItem">Open</td>
+		          <td>{{task.description}}</td>
+		        </tr>
+		      </tbody>
+		    </table>
+		</div>
+    </body>
+</html>

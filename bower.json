@@ -1,0 +1,10 @@
+{
+  "name": "todotron",
+  "version": "0.1.0",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "*",
+    "angular": "~1.4.x",
+    "angular-ui-router": "*"
+  }
+}
